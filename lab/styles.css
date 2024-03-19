@@ -1,0 +1,42 @@
+td[data-value="false"] {
+    background-color: red;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+header nav .nav-brand {
+    flex: 1
+}
+
+a:any-link {
+    text-decoration: underline;
+}
+
+.form-inline {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+main {
+    margin: 50px;
+}
+
+main button {
+    padding: 2px;
+    border: 1px solid lightgray;
+    margin: 0;
+}
