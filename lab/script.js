@@ -25,7 +25,7 @@ function renderProgram(record) {
     author,
     username: `L428+${number}@adobeeventlab.com`,
     publishFormUrl: `${publish}/content/forms/af/we-finance-credit-card-application.html`,
-    edsFormUrl: `https://main--${seatNo}--l428.hlx.page/content/forms/af/we-finance-credit-card-application`,
+    edsFormUrl: `https://main--${seatNo}--l428.hlx.live/content/forms/af/we-finance-credit-card-application`,
   };
   const aemId = `p${id}-e${eId}`;
   const row = `<tr>
