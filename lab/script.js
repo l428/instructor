@@ -79,6 +79,10 @@ async function loadStatus() {
   }
 }
 
+async function openPageSpeed(url) {
+  window.open(`https://pagespeed.web.dev/analysis?url=${url}&form_factor=mobile`);
+}
+
 async function getDetails(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
