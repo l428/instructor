@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
 const seatMap = {};
+
 function renderProgram(record) {
   const { program, environment } = record;
   const { id, name } = program;
@@ -11,11 +12,16 @@ function renderProgram(record) {
     instanceStatus: { status },
     repo: { status: repoStatus, url },
     zipcodeFDM: { status: zipCodeFdmStatus, url: zipCodeFdmUrl, code: zipCodeFdmCode },
-    creditCardForm: { status: creditCardFormStatus, url: creditCardFormUrl, code: creditCardFormCode },
-    creditCardDAMAsset: { status: creditCardDAMAssetStatus, url: creditCardDAMAssetUrl, code: creditCardDAMAssetCode },
-    creditCardImage: { status: creditCardImageStatus, url: creditCardImageUrl, code: creditCardImageCode },
+    creditCardDAMAsset:
+      { status: creditCardDAMAssetStatus, url: creditCardDAMAssetUrl, code: creditCardDAMAssetCode },
+    creditCardImage:
+      { status: creditCardImageStatus, url: creditCardImageUrl, code: creditCardImageCode },
     weFinanceLogo: { status: weFinanceLogoStatus, url: weFinanceLogoUrl, code: weFinanceLogoCode },
     edsStatus: { status: edsStatus, url: edsUrl, code },
+    ccForm: { status: ccFormStatus, url: ccFormUrl, code: ccFormCode },
+    edsCCForm: {
+      status: edsCCFormStatus, url: edsCCFormUrl, code: edsCCFormCode, valid,
+    },
     edsConfig: { status: edsConfigStatus, url: edsConfigUrl, value: edsConfigCode },
   } = healthchecks;
   const number = name.replace('L428 ', '');
@@ -44,7 +50,7 @@ function renderProgram(record) {
             <a href="${edsConfigUrl}">${edsConfigCode}</a>
         </td>
         <td data-value="${repoStatus}">
-            <a href="${url}">${seatNo}</a>
+            <a href="${url}">seat${name.replace('L428 ', '')}</a>
         </td>
         <td data-value="${edsStatus}">
             <a href="${edsUrl}">${code}</a>
@@ -52,17 +58,17 @@ function renderProgram(record) {
         <td data-value="${zipCodeFdmStatus}">
             <a href="${zipCodeFdmUrl}">${zipCodeFdmCode}</a>
         </td>
-        <td data-value="${creditCardFormStatus}">
-            <a href="${creditCardFormUrl}">${creditCardFormCode}</a>
+        <td data-value="${ccFormStatus}">
+            <a href="${ccFormUrl}">${ccFormCode}</a>
         </td>
-        <td data-value="${creditCardDAMAssetStatus}">
-            <a href="${creditCardDAMAssetUrl}">${creditCardDAMAssetCode}</a>
+        <td data-value="${edsCCFormStatus && valid}">
+            <a href="${edsCCFormUrl}">${edsCCFormCode}</a><br>
+            Form Def Valid - ${valid}
         </td>
-        <td data-value="${creditCardImageStatus}">
-            <a href="${creditCardImageUrl}">${creditCardImageCode}</a>
-        </td>
-        <td data-value="${weFinanceLogoStatus}">
-            <a href="${weFinanceLogoUrl}">${weFinanceLogoCode}</a>
+        <td data-value="${creditCardDAMAssetStatus && creditCardImageStatus && weFinanceLogoStatus}">
+            <a href="${creditCardDAMAssetUrl}">CC DAM - ${creditCardDAMAssetCode}</a> <br>
+            <a href="${creditCardImageUrl}"> CC Image - ${creditCardImageCode}</a> <br>
+            <a href="${weFinanceLogoUrl}">Logo ${weFinanceLogoCode}</a> <br>
         </td>
     </tr>`;
 
@@ -73,10 +79,8 @@ async function loadStatus() {
   const response = await fetch('/lab/config.json');
   const data = await response.json();
   const rows = data?.map((record) => renderProgram(record)).join('');
-  const table = document.getElementById('tbody');
-  if (table) {
-    table.innerHTML = rows;
-  }
+  const tbody = document.getElementById('tbody');
+  if (tbody) tbody.innerHTML += rows;
 }
 
 async function openPageSpeed(url) {
