@@ -321,7 +321,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133156-e1294339.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -1171,7 +1171,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133153-e1294334.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -1341,7 +1341,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133138-e1294294.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -1766,7 +1766,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133101-e1294327.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -1851,7 +1851,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133100-e1294328.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -2191,7 +2191,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133098-e1294329.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -2616,7 +2616,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133132-e1294291.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -2786,7 +2786,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133096-e1294331.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -3211,7 +3211,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133040-e1294240.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -4061,7 +4061,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133091-e1294325.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -4401,7 +4401,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133089-e1294323.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -4741,7 +4741,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133126-e1294283.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -4826,7 +4826,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133032-e1294235.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -5336,7 +5336,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133086-e1294319.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -6611,7 +6611,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133119-e1294278.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
@@ -6951,7 +6951,7 @@
           "status": true,
           "code": 200,
           "value": null,
-          "valid": false
+          "valid": true
         },
         "edsConfig": {
           "url": "https://author-p133022-e1294218.adobeaemcloud.com/conf/global/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content.1.json",
