@@ -28,33 +28,48 @@
             <div class="form-inline">
                 <input type="number" id="seatNo" placeholder="Enter Seat No" name="seatno" onkeyup="getDetails(event)">
             </div>
-            <h4>Document Based</h4>
-            <ul>
-                <li>WKND Git Repo - <a href="https://github.com/l428/wknd" target="_blank">link</a></li>
-                <li>Forms Importer - <a href="https://main--afb--adobe.hlx.live/tools/importer/forms/ui/index.html" target="_blank">link</a></li>
-                <li>Content Source - <a href="https://drive.google.com/drive/folders/1P5JNYPF8zwXLW8o0Z9fCHTfTZZe2z1Aa" target="_blank">Google Drive</a></li>
-                <li>Sample Form - <a href="https://l428.github.io/instructor/" target="_blank">link</a></li>
-            </ul>
-            <h4>AEM Based Authoring</h4>
-            <ul>
-                <li>We.Finance Git Repo - <a id="gitUrl" href="" target="_blank">link</a></li>
-                <li>AEM URL - <a id="author" href="" target="_blank">link</a></li>
-                    <ul>
-                        <li>User Name - <i id="username">L428+01@adobeeventlab.com</i> 
-                            <button onclick="navigator.clipboard.writeText(username.textContent)">copy</button> 
-                        </li>
-                        <li>Password - <i id="password">Adobe2024!</i> 
-                            <button onclick="navigator.clipboard.writeText(password.textContent)">copy</button> 
-                        </li>
-                    </ul>
-                <li>Publish Url - <a id="publishFormUrl" href="" target="_blank">Credit Card Application</a>
-                    <button onclick="openPageSpeed(publishFormUrl.href)">LHS</button>
-                </li>
-                <li>Edge Delivery Url - <a id="edsFormUrl" href="" target="_blank">Credit Card Application</a>
-                    <button onclick="openPageSpeed(edsFormUrl.href)">LHS</button>
-                </li>
-
-            </ul>
+            <div class="details">
+                <h2>Details:- Seat &nbsp;<span id="seatNoDisplay">00</span></h2>
+                <div>
+                    <div>
+                        <h4>Document Based</h4>
+                        <ul>
+                            <li>WKND Git Repo - <a href="https://github.com/l428/wknd" target="_blank">link</a></li>
+                            <li>Forms Importer - <a href="https://main--afb--adobe.hlx.live/tools/importer/forms/ui/index.html" target="_blank">link</a></li>
+                            <li>Content Source - <a href="https://drive.google.com/drive/folders/1P5JNYPF8zwXLW8o0Z9fCHTfTZZe2z1Aa" target="_blank">Google Drive</a></li>
+                            <li>Sample Form - <a href="https://l428.github.io/instructor/" target="_blank">link</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>AEM Based Authoring</h4>
+                        <ul>
+                            <li>We.Finance Git Repo - <a id="gitUrl" href="" target="_blank">link</a></li>
+                            <li>AEM URL - <a id="author" href="" target="_blank">link</a></li>
+                                <ul>
+                                    <li>User Name - <i id="username">L428+01@adobeeventlab.com</i> 
+                                        <button onclick="navigator.clipboard.writeText(username.textContent)">copy</button> 
+                                    </li>
+                                    <li>Password - <i id="password">Adobe2024!</i> 
+                                        <button onclick="navigator.clipboard.writeText(password.textContent)">copy</button> 
+                                    </li>
+                                </ul>
+                            <li>Publish Url - <a id="publishFormUrl" href="" target="_blank">Credit Card Application</a>
+                                <button onclick="openPageSpeed(publishFormUrl.href)">LHS</button>
+                            </li>
+                            <li>Edge Delivery Url - <a id="edsFormUrl" href="" target="_blank">Credit Card Application</a>
+                                <button onclick="openPageSpeed(edsFormUrl.href)">LHS</button>
+                            </li>
+                            <li>Local Development Setup - <span id="gitClone">git clone https://github.com/l428/seat01.git</span> 
+                                <button onclick="navigator.clipboard.writeText(gitClone.textContent)">copy</button> 
+                            </li>
+                            <li>Local Development Url  - 
+                                <a href="http://localhost:3000/content/forms/af/we-finance-credit-card-application" target="_blank">link </a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
     </body>
 </html>

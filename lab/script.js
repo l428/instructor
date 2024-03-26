@@ -26,11 +26,16 @@ function renderProgram(record) {
   } = healthchecks;
   const number = name.replace('L428 ', '');
   const seatNo = `seat${number}`;
+  const publishFormUrl = `${publish}/content/forms/af/we-finance-credit-card-application.html`;
   seatMap[seatNo] = {
     gitUrl: `https://github.com/l428/${seatNo}`,
     author,
     username: `L428+${number}@adobeeventlab.com`,
-    publishFormUrl: `${publish}/content/forms/af/we-finance-credit-card-application.html`,
+    publishFormUrl,
+    gitClone: `git clone https://github.com/l428/${seatNo}.git
+    cd ${seatNo}
+    code .
+    aem up`,
     edsFormUrl: `https://main--${seatNo}--l428.hlx.live/content/forms/af/we-finance-credit-card-application`,
   };
   const aemId = `p${id}-e${eId}`;
@@ -59,7 +64,7 @@ function renderProgram(record) {
             <a href="${zipCodeFdmUrl}">${zipCodeFdmCode}</a>
         </td>
         <td data-value="${ccFormStatus}">
-            <a href="${ccFormUrl}">${ccFormCode}</a>
+            <a href="${publishFormUrl}">${ccFormCode}</a>
         </td>
         <td data-value="${edsCCFormStatus && valid}">
             <a href="${edsCCFormUrl}">${edsCCFormCode}</a><br>
@@ -93,6 +98,9 @@ async function getDetails(event) {
     const number = +document.getElementById('seatNo').value;
     const formattedNumber = String(number).padStart(2, '0');
     const seatNo = `seat${formattedNumber}`;
+
+    const seatNoDisplay = document.getElementById('seatNoDisplay');
+    if (seatNoDisplay) seatNoDisplay.textContent = number;
     if (seatMap[seatNo]) {
       const details = seatMap[seatNo];
       Object.keys(details).forEach((key) => {

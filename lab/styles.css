@@ -40,3 +40,17 @@ main button {
     border: 1px solid lightgray;
     margin: 0;
 }
+
+.details h2 {
+    justify-content: center;
+    display: flex;
+}
+
+.details > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#gitClone {
+    display: none;
+}
