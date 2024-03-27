@@ -29,7 +29,7 @@ function renderProgram(record) {
   const publishFormUrl = `${publish}/content/forms/af/we-finance-credit-card-application.html`;
   seatMap[seatNo] = {
     gitUrl: `https://github.com/l428/${seatNo}`,
-    author,
+    author: `${author}/ui#/aem/aem/forms.html/content/dam/formsanddocuments`,
     username: `L428+${number}@adobeeventlab.com`,
     publishFormUrl,
     gitClone: `git clone https://github.com/l428/${seatNo}.git
