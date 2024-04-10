@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: https://author-p129702-e1266104.adobeaemcloud.com/
+    url: https://author-p129702-e1266105.adobeaemcloud.com/
     type: "markup"
     suffix: ".md.html"
