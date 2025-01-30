@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Usage and Impact Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    fieldset {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .required {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form id="ai-survey">
+    <!-- Section 1: General Information -->
+    <fieldset>
+      <legend>Section 1: General Information</legend>
+      <label for="role">What is your job role? <span class="required">*</span></label>
+      <select id="role" name="role" required>
+        <option value="product-manager">Product Manager</option>
+        <option value="project-manager">Project Manager</option>
+        <option value="engineering-manager">Engineering Manager</option>
+        <option value="individual-contributor">Individual Contributor (IC)</option>
+        <option value="qa-engineer">QA Engineer / Automation Tester</option>
+        <option value="other">Other (please specify)</option>
+      </select>
+
+    </fieldset>
+
+    <!-- Section 2: AI Tools Usage -->
+    <fieldset>
+      <legend>Section 2: AI Tools Usage</legend>
+      <label>Which AI tools do you use regularly? (Select all that apply) <span class="required">*</span></label>
+      <label><input type="checkbox" name="ai-tools" value="chatgpt" required> ChatGPT</label>
+      <label><input type="checkbox" name="ai-tools" value="github-copilot"> GitHub CoPilot</label>
+      <label><input type="checkbox" name="ai-tools" value="cursor"> Cursor</label>
+      <label><input type="checkbox" name="ai-tools" value="claude"> Claude</label>
+      <label><input type="checkbox" name="ai-tools" value="firefly"> Firefly </label>
+      <label><input type="checkbox" name="ai-tools" value="gemini"> Gemini</label>
+      <label><input type="checkbox" name="ai-tools" value="microsoft-copilot"> Microsoft Copilot</label>
+      <label><input type="checkbox" name="ai-tools" value="meta"> Meta AI</label>
+      <label><input type="checkbox" name="ai-tools" value="fluffyjaw"> Fluffyjaw</label>
+      <label><input type="checkbox" name="ai-tools" value="other"> Other (please specify): <input type="text" name="ai-tools-other"></label>
+
+      <label>For what purposes do you use AI tools? (Select all that apply) <span class="required">*</span></label>
+      <label><input type="checkbox" name="ai-purposes" value="writing-code" required> Writing and debugging code</label>
+      <label><input type="checkbox" name="ai-purposes" value="generating-test-cases"> Generating test cases</label>
+      <label><input type="checkbox" name="ai-purposes" value="data-analysis"> Conducting data analysis</label>
+      <label><input type="checkbox" name="ai-purposes" value="automating-documentation"> Automating documentation</label>
+      <label><input type="checkbox" name="ai-purposes" value="scheduling"> Scheduling and meeting summarization</label>
+      <label><input type="checkbox" name="ai-purposes" value="generating-reports"> Generating reports and insights</label>
+      <label><input type="checkbox" name="ai-purposes" value="other"> Other (please specify): <input type="text" name="ai-purposes-other"></label>
+      
+      <label>How frequently do you use AI tools in your work? <span class="required">*</span></label>
+      <select id="frequency" name="frequency" required>
+        <option value="">Select frequency</option>
+        <option value="multiple-daily">Multiple times per day</option>
+        <option value="daily">Daily</option>
+        <option value="few-times-week">Few times per week</option>
+        <option value="weekly">Weekly</option>
+        <option value="rarely">Rarely</option>
+        <option value="never">Never</option>
+      </select>
+
+    </fieldset>
+
+    <!-- Section 3: AI’s Impact on Productivity -->
+    <fieldset>
+      <legend>Section 3: AI’s Impact on Productivity</legend>
+      <label for="time-saved">How much time have AI tools saved you per week? <span class="required">*</span></label>
+      <select id="time-saved" name="time-saved" required>
+        <option value="">Select time saved</option>
+        <option value="less-than-1">Less than 1 hour</option>
+        <option value="1-5">1-5 hours</option>
+        <option value="5-10">5-10 hours</option>
+        <option value="more-than-10">More than 10 hours</option>
+      </select>
+
+      <label>Where have AI tools saved you the most time? (Select all that apply) <span class="required">*</span></label>
+      <label><input type="checkbox" name="time-saved-areas" value="writing-code" required> Writing code</label>
+      <label><input type="checkbox" name="time-saved-areas" value="debugging"> Debugging / Code Review</label>
+      <label><input type="checkbox" name="time-saved-areas" value="documentation"> Documentation</label>
+      <label><input type="checkbox" name="time-saved-areas" value="meeting-summarization"> Meeting summarization / scheduling</label>
+      <label><input type="checkbox" name="time-saved-areas" value="data-analysis"> Data analysis / forecasting</label>
+      <label><input type="checkbox" name="time-saved-areas" value="customer-support"> Customer support automation</label>
+      <label><input type="checkbox" name="time-saved-areas" value="generating-reports"> Generating reports / insights</label>
+      <label><input type="checkbox" name="time-saved-areas" value="other"> Other (please specify): <input type="text" name="time-saved-areas-other"></label>
+
+      <label for="significant-impact">Can you provide examples where AI tools made a significant impact on your work? <span class="required">*</span></label>
+      <textarea id="significant-impact" name="significant-impact" required></textarea>
+
+      <label>How much has AI improved your productivity? <span class="required">*</span></label>
+      <label><input type="radio" name="productivity-impact" value="significantly-increased" required> Significantly increased</label>
+      <label><input type="radio" name="productivity-impact" value="moderately-increased"> Moderately increased</label>
+      <label><input type="radio" name="productivity-impact" value="no-change"> No change</label>
+      <label><input type="radio" name="productivity-impact" value="moderately-decreased"> Moderately decreased</label>
+      <label><input type="radio" name="productivity-impact" value="significantly-decreased"> Significantly decreased</label>
+      
+      <label>For tasks where AI is used, what percentage of the work can be automated?</label>
+      <select id="automation-percentage" name="automation-percentage" required>
+        <option value="">Select percentage</option>
+        <option value="0-25">0-25%</option>
+        <option value="26-50">26-50%</option>
+        <option value="51-75">51-75%</option>
+        <option value="76-100">76-100%</option>
+      </select>
+    </fieldset>
+
+    <!-- Section 4: AI’s Role in Task Automation & Collaboration -->
+    <fieldset>
+      <legend>Section 4: AI’s Role in Task Automation & Collaboration</legend>
+      <label>Which repetitive tasks have AI tools helped replace or reduce? (Select all that apply) <span class="required">*</span></label>
+      <label><input type="checkbox" name="repetitive-tasks" value="data-entry" required> Data entry</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="report-generation"> Report generation</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="email-management"> Email management</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="scheduling"> Scheduling and calendar management</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="code-review"> Code review</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="bug-tracking"> Bug tracking</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="customer-support"> Customer support queries</label>
+      <label><input type="checkbox" name="repetitive-tasks" value="other"> Other (please specify): <input type="text" name="repetitive-tasks-other"></label>
+
+      <label>Have AI tools completely automated any tasks in your role? <span class="required">*</span></label>
+      <label><input type="radio" name="task-automation" value="yes-fully" required> Yes, AI fully handles some tasks without my intervention.</label>
+      <label><input type="radio" name="task-automation" value="partially"> Partially, but I still need to review or adjust AI-generated results.</label>
+      <label><input type="radio" name="task-automation" value="no"> No, AI only assists but doesn’t fully automate any part of my work.</label>
+      <label><input type="radio" name="task-automation" value="not-applicable"> Not applicable.</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Section 6: Team Scaling & Efficiency</legend>
+      
+      <label>How has AI impacted your team's capacity to handle work? <span class="required">*</span></label>
+      <select id="team-capacity" name="team-capacity" required>
+        <option value="">Select impact</option>
+        <option value="significant-increase">Significantly increased capacity</option>
+        <option value="moderate-increase">Moderately increased capacity</option>
+        <option value="slight-increase">Slightly increased capacity</option>
+        <option value="no-change">No change in capacity</option>
+        <option value="decreased">Decreased capacity</option>
+      </select>
+
+      <label for="efficiency-examples">Describe specific examples where AI tools have improved team efficiency: <span class="required">*</span></label>
+      <textarea id="efficiency-examples" name="efficiency-examples" placeholder="Share concrete examples of efficiency improvements..." required></textarea>
+    </fieldset>
+
+    <!-- Section 7: Future Outlook -->
+    <fieldset>
+      <legend>Section 7: Future AI Enhancements</legend>
+      
+      <label for="future-impact">Which areas of your work do you expect AI to significantly impact in the next year? <span class="required">*</span></label>
+      <textarea id="future-impact" name="future-impact" placeholder="Describe anticipated changes in your role and workflow..." required></textarea>
+
+      <label>What challenges do you face when adopting AI tools? (Select all that apply)</label>
+      <label><input type="checkbox" name="challenges" value="learning-curve"> Learning curve</label>
+      <label><input type="checkbox" name="challenges" value="integration"> Integration with existing tools</label>
+      <label><input type="checkbox" name="challenges" value="accuracy"> Output accuracy/quality</label>
+      <label><input type="checkbox" name="challenges" value="cost"> Cost considerations</label>
+      <label><input type="checkbox" name="challenges" value="security"> Security/privacy concerns</label>
+      <label><input type="checkbox" name="challenges" value="other"> Other (please specify): <input type="text" name="challenges-other"></label>
+      <label for="challenges">What are the biggest challenges you face when using AI tools? <span class="required">*</span></label>
+      <textarea id="challenges" name="challenges" required></textarea>
+
+      <label for="improvements">What features or improvements would make AI tools more effective in your workflow? <span class="required">*</span></label>
+      <textarea id="improvements" name="improvements" required></textarea>
+
+
+      <label>Do you see AI tools playing a greater role in decision-making or strategic planning in the future? <span class="required">*</span></label>
+      <label><input type="radio" name="future-role" value="yes" required> Yes</label>
+      <label><input type="radio" name="future-role" value="no"> No</label>
+
+      <label for="future-tasks">If Yes, which tasks do you foresee AI handling in the future? <span class="required">*</span></label>
+      <textarea id="future-tasks" name="future-tasks" required></textarea>
+    </fieldset>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
