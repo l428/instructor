@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create your Secur account</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #e8ede9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 32px 28px;
+      width: 100%;
+      max-width: 340px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 1.45rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+
+    h1 strong {
+      font-weight: 700;
+    }
+
+    .field-group {
+      margin-bottom: 18px;
+    }
+
+    .field-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    label {
+      font-size: 0.88rem;
+      color: #333333;
+    }
+
+    .tooltip-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #2e7d6b;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+      flex-shrink: 0;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d8d8d8;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color 0.15s;
+    }
+
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    select:focus {
+      border-color: #2e7d6b;
+    }
+
+    .select-wrapper {
+      position: relative;
+    }
+
+    .select-wrapper select {
+      padding-right: 32px;
+    }
+
+    .select-wrapper::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #666666;
+      pointer-events: none;
+    }
+
+    .section-label {
+      font-size: 0.88rem;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      accent-color: #2e7d6b;
+    }
+
+    .checkbox-item span {
+      font-size: 0.85rem;
+      color: #333333;
+    }
+
+    .submit-btn {
+      margin-top: 28px;
+      width: auto;
+      padding: 12px 26px;
+      background-color: #2e7d6b;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .submit-btn:hover {
+      background-color: #256358;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Create your <strong>Secur</strong> account!</h1>
+
+    <form>
+      <!-- Name -->
+      <div class="field-group">
+        <div class="field-label-row">
+          <label for="name">Name</label>
+          <div class="tooltip-icon" title="Enter your full name">?</div>
+        </div>
+        <input type="text" id="name" name="name" autocomplete="name" />
+      </div>
+
+      <!-- Mobile Number -->
+      <div class="field-group">
+        <div class="field-label-row">
+          <label for="mobile">Mobile Number</label>
+          <div class="tooltip-icon" title="Enter your mobile number">?</div>
+        </div>
+        <input type="tel" id="mobile" name="mobile" autocomplete="tel" />
+      </div>
+
+      <!-- Email Id -->
+      <div class="field-group">
+        <div class="field-label-row">
+          <label for="email">Email Id</label>
+          <div class="tooltip-icon" title="Enter your email address">?</div>
+        </div>
+        <input type="email" id="email" name="email" autocomplete="email" />
+      </div>
+
+      <!-- Profession -->
+      <div class="field-group">
+        <div class="field-label-row">
+          <label for="profession">Profession</label>
+          <div class="tooltip-icon" title="Select your profession">?</div>
+        </div>
+        <div class="select-wrapper">
+          <select id="profession" name="profession">
+            <option value="" disabled selected></option>
+            <option>Doctor</option>
+            <option>Engineer</option>
+            <option>Teacher</option>
+            <option>Student</option>
+            <option>Influencer</option>
+            <option>Travel Vlogger</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Account Type -->
+      <div class="field-group">
+        <div class="section-label">Account Type</div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" name="account_type" value="saving" />
+            <span>Saving</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="account_type" value="investments" />
+            <span>Investments</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="account_type" value="credit_card" />
+            <span>Credit Card</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Preferred Contact Time -->
+      <div class="field-group">
+        <div class="field-label-row">
+          <label for="contact_time">Preferred Contact Time</label>
+          <div class="tooltip-icon" title="Select your preferred contact time">?</div>
+        </div>
+        <div class="select-wrapper">
+          <select id="contact_time" name="contact_time">
+            <option value="" disabled selected></option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">I'm interested!</button>
+    </form>
+  </div>
+</body>
+</html>
